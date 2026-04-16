@@ -118,6 +118,12 @@
     gap: 40px;
 }
 
+section div h1 span
+{
+    color: #0ea5e9;
+}
+
+
 /* TEXTO */
 .home-content {
     flex: 1;
@@ -142,6 +148,7 @@
 @media (max-width: 768px) {
 
     /* NAVBAR */
+
     .hamburger
     {
         display: block;
@@ -163,7 +170,9 @@
     .menu.active{
         display: flex;
     }
-
+    .logo{
+        display: none;
+    }
    
 
     /* HOME */
@@ -175,6 +184,7 @@
 
     .home-content h1 {
         font-size: 22px;
+        margin: 20px 0;
     }
 
     .home-content h2 {
