@@ -11,19 +11,30 @@
 
     <!-- NAVBAR -->
     <nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+
+
         <div class="logo">Romulo</div>
 
-        <div class="menu">
+        <div class="menu" id="menu">
             <a href="#">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">About</a>
+            <a href="#">services</a>
+            <a href="#">About Me</a>
+            <a href="">Portfolio</a>
+            <a href="">contacto</a>
+            <a href="#" class="btn-primary">Hire Me</a>
         </div>
+        
+        
     </nav>
 
     <!-- HOME -->
     <section class="home">
         <div class="home-content">
-            <h1>Olá, sou Romulo</h1>
+            <h1>Olá, sou Romulo Monteiro</h1>
             <h2>Frontend Developer</h2>
             <p>
                 Sou web developer em Portugal e ajudo empresas a criar sites modernos
@@ -41,4 +52,13 @@
     </section>
 
 </body>
+
+<script>
+    //funcitio para o menu hamburger
+    function toggleMenu()
+    {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active")
+    }
+</script>
 </html>

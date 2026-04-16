@@ -6,11 +6,20 @@
         }
 
         body {
-            background: #0f172a;
             color: white;
+            background: linear-gradient(180deg, #0f172a, #1e293b, #0f172a);
         }
 
         /* NAVBAR */
+        
+        /*Esconder hamburger desktop*/
+        .hamburger 
+        {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -19,7 +28,7 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 40px;
             font-weight: bold;
         }
 
@@ -28,19 +37,25 @@
             text-decoration: none;
             color: white;
             transition: 0.3s;
+            font-size: 20px;
         }
-
         .menu a:hover {
             color: #38bdf8;
         }
+        nav a
+        { display: inline-block;
+            padding: 12px 20px;
+            margin-right: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+
+        }
+
 
         /* HOME */
-        .home {
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            padding: 0 10%;
-        }
+        
 
         .home-content {
             max-width: 600px;
@@ -123,23 +138,68 @@
 }
 
 /* RESPONSIVO (MOBILE) */
+/* MOBILE GERAL */
 @media (max-width: 768px) {
+
+    /* NAVBAR */
+    .hamburger
+    {
+        display: block;
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+        background: linear-gradient(180deg, #0f172a, #1e293b, #0f172a);
+    }
+    .menu a {
+        margin: 10px;
+        font-size: 18px;
+    }
+    .menu.active{
+        display: flex;
+    }
+
+   
+
+    /* HOME */
     .home {
         flex-direction: column;
         text-align: center;
-    }
-    .home-content
-    {
-        margin-top: 20px;
+        padding: 20px 5%;
     }
 
+    .home-content h1 {
+        font-size: 22px;
+    }
+
+    .home-content h2 {
+        font-size: 32px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    /* IMAGEM */
     .img img {
-        max-width: 300px;
-     }
+        max-width: 250px;
+    }
 
+    /* BOTÕES */
     .buttons {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buttons a {
+        width: 80%;
+        text-align: center;
     }
 }
