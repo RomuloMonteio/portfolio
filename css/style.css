@@ -1,215 +1,257 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            color: white;
-            background: linear-gradient(180deg, #0f172a, #1e293b, #0f172a);
-        }
-
-        /* NAVBAR */
-        
-        /*Esconder hamburger desktop*/
-        .hamburger 
-        {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-        }
-
-        .logo {
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        .menu a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: white;
-            transition: 0.3s;
-            font-size: 20px;
-        }
-        .menu a:hover {
-            color: #38bdf8;
-        }
-        nav a
-        { display: inline-block;
-            padding: 12px 20px;
-            margin-right: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-
-        }
-
-
-        /* HOME */
-        
-
-        .home-content {
-            max-width: 600px;
-        }
-
-        .home-content h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .home-content h2 {
-            font-size: 48px;
-            color: #38bdf8;
-            margin-bottom: 15px;
-        }
-
-        .home-content p {
-            font-size: 16px;
-            color: #cbd5f5;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-
-        /* BOTÕES */
-        .buttons a {
-            display: inline-block;
-            padding: 12px 20px;
-            margin-right: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #38bdf8;
-            color: black;
-        }
-
-        .btn-primary:hover {
-            background: #0ea5e9;
-        }
-
-        .btn-secondary {
-            border: 2px solid #38bdf8;
-            color: #38bdf8;
-        }
-
-        .btn-secondary:hover {
-            background: #38bdf8;
-            color: black;
-        }
-
-        .home {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
-    gap: 40px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-section div h1 span
+body {
+    color: white;
+    background: linear-gradient(180deg, #0f172a, #1e293b, #0f172a);
+}
+
+/* NAVBAR */
+        
+    /*Esconder hamburger desktop*/
+    .hamburger 
+    {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+    }
+
+    .logo {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .menu a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+        font-size: 20px;
+    }
+    .menu a:hover {
+        color: #38bdf8;
+    }
+    nav a
+    { display: inline-block;
+        padding: 12px 20px;
+        margin-right: 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+
+    }
+
+
+/* HOME */
+        
+
+    .home-content {
+        max-width: 600px;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .home-content h2 {
+        font-size: 48px;
+        color: #38bdf8;
+        margin-bottom: 15px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+        color: #cbd5f5;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    /* BOTÕES */
+    .buttons a {
+        display: inline-block;
+        padding: 12px 20px;
+        margin-right: 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn-primary {
+        background: #38bdf8;
+        color: black;
+    }
+
+    .btn-primary:hover {
+        background: #0ea5e9;
+    }
+
+    .btn-secondary {
+        border: 2px solid #38bdf8;
+        color: #38bdf8;
+    }
+
+    .btn-secondary:hover {
+        background: #38bdf8;
+        color: black;
+    }
+
+    .home {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10%;
+        gap: 40px;
+    }
+
+    section div h1 span
+    {
+        color: #0ea5e9;
+    }
+
+
+    /* TEXTO */
+    .home-content {
+        flex: 1;
+    }
+
+    /* IMAGEM */
+    .img {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 20px;
+    }
+
+/*Servicos*/
+.services h1
 {
-    color: #0ea5e9;
+    text-align: center;
+}
+.services p
+{
+    text-align: center;
+}
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+   background: linear-gradient(
+    180deg,
+    #020617 0%,
+    #0f172a 35%,
+    #1e293b 65%,
+    #0b1220 100%);
 }
 
-
-/* TEXTO */
-.home-content {
-    flex: 1;
+.card-custom h4
+{
+    color: #38bdf8;
+}
+.card-custom i
+{
+    color: white;
 }
 
-/* IMAGEM */
-.img {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.img img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 20px;
+.icon {
+    font-size: 40px;
+    color: #000;
 }
 
 /* RESPONSIVO (MOBILE) */
 /* MOBILE GERAL */
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
 
-    /* NAVBAR */
+        /* NAVBAR */
 
-    .hamburger
-    {
-        display: block;
-    }
-    .menu{
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 20px 0;
-        background: linear-gradient(180deg, #0f172a, #1e293b, #0f172a);
-    }
-    .menu a {
-        margin: 10px;
-        font-size: 18px;
-    }
-    .menu.active{
-        display: flex;
-    }
-    .logo{
-        display: none;
-    }
-   
+        .hamburger
+        {
+            display: block;
+        }
+        .menu{
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            padding: 20px 0;
+            background: linear-gradient(180deg, #0f172a, #1e293b, #0f172a);
+        }
+        .menu a {
+            margin: 10px;
+            font-size: 18px;
+        }
+        .menu.active{
+            display: flex;
+        }
+        .logo{
+            display: none;
+        }
+    
 
-    /* HOME */
-    .home {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 5%;
-    }
+        /* HOME */
+        .home {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 5%;
+        }
 
-    .home-content h1 {
-        font-size: 22px;
-        margin: 20px 0;
-    }
+        .home-content h1 {
+            font-size: 22px;
+            margin: 20px 0;
+        }
 
-    .home-content h2 {
-        font-size: 32px;
-    }
+        .home-content h2 {
+            font-size: 32px;
+        }
 
-    .home-content p {
-        font-size: 14px;
-    }
+        .home-content p {
+            font-size: 14px;
+        }
 
-    /* IMAGEM */
-    .img img {
-        max-width: 250px;
-    }
+        /* IMAGEM */
+        .img img {
+            max-width: 250px;
+        }
 
-    /* BOTÕES */
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+        /* BOTÕES */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .buttons a {
-        width: 80%;
-        text-align: center;
+        .buttons a {
+            width: 80%;
+            text-align: center;
+        }
     }
-}
