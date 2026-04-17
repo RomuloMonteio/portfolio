@@ -38,7 +38,15 @@ transition:.3s;
 }
 
 .navbar-nav .nav-link:hover{
-background:rgba(255,255,255,.08);
+background:rgba(255, 255, 255, 0.014);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.30);
+box-shadow:
+inset 0 1px 1px rgba(255,255,255,.35),
+0 4px 18px rgba(255,255,255,.08);
+transition:all .35s ease;
+border-radius:30px;
 }
 
 .active-link{
@@ -58,6 +66,7 @@ nav span
     color: #0ea5e9;
     text-decoration: underline;
 }
+
 /* HOME */
         
 
@@ -114,7 +123,7 @@ nav span
     }
 
     .home {
-        min-height: 90vh;
+        min-height:70vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -163,40 +172,58 @@ nav span
 {
     text-align: center;
 }
-.services .container
-{
-    margin-top: -5%;
-}
-.card-custom {
-    border: none;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-   background: linear-gradient(
-    180deg,
-    #020617 0%,
-    #0f172a 35%,
-    #1e293b 65%,
-    #0b1220 100%);
+
+/* CARD */
+.liquid-card{
+border-radius:28px;
+overflow:hidden;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:
+0 8px 32px rgba(0,0,0,.25),
+inset 0 1px 1px rgba(255,255,255,.2);
+
+transition:.4s ease;
 }
 
-.card-custom h4
-{
-    color: #38bdf8;
-}
-.card-custom i
-{
-    color: white;
-}
-
-.card-custom:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+/* Hover */
+.liquid-card:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:
+0 20px 45px rgba(0,0,0,.35),
+0 0 20px rgba(100,150,255,.25);
 }
 
-.icon {
-    font-size: 40px;
-    color: #000;
+/* Imagem */
+.liquid-card img{
+height:250px;
+object-fit:cover;
+}
+
+/* Botão */
+.liquid-btn{
+border:none;
+padding:10px 20px;
+border-radius:30px;
+color:white;
+font-weight:600;
+
+background:linear-gradient(135deg,#8b5cf6,#3b82f6);
+
+box-shadow:
+0 0 15px rgba(100,120,255,.35);
+
+transition:.3s;
+}
+
+.liquid-btn:hover{
+transform:scale(1.05);
+color:white;
 }
 
 /* RESPONSIVO (MOBILE) */
