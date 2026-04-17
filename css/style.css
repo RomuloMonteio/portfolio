@@ -147,11 +147,22 @@ body {
 /*Servicos*/
 .services h1
 {
+    margin-top: 5%;
     text-align: center;
 }
+.services span
+{
+    text-decoration: underline;
+    color: #38bdf8;
+}
+
 .services p
 {
     text-align: center;
+}
+.services .container
+{
+    margin-top: -5%;
 }
 .card-custom {
     border: none;
