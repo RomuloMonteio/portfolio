@@ -22,6 +22,17 @@
 <div id="cursor"></div>
 <div id="cursor-dot"></div>
 
+<!-- Foto flutuante partilhada entre Home e Sobre -->
+<div id="floating-photo-wrap">
+    <div id="floating-photo-ring"></div>
+    <div id="floating-photo-inner">
+        <img src="img/romulo.png" alt="Romulo Monteiro" id="hero-photo">
+    </div>
+    <span class="orb-dot" style="--orb-color:#38bdf8"></span>
+    <span class="orb-dot" style="--orb-color:#8b5cf6"></span>
+    <span class="orb-dot" style="--orb-color:#3b82f6"></span>
+</div>
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg glass-nav">
     <div class="container-fluid">
@@ -58,8 +69,8 @@
             <a href="#portfolio" class="btn-secondary">Ver projetos</a>
         </div>
     </div>
-    <div class="img" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
-        <img src="img/romulo.png" alt="Romulo Monteiro">
+    <div class="home-photo-slot" id="home-photo-slot">
+        <img src="img/romulo.png" alt="" class="slot-img" aria-hidden="true">
     </div>
 </section>
 
@@ -68,8 +79,8 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-12 col-md-5 text-center" data-aos="fade-right" data-aos-duration="900">
-                <div class="sobre-img-wrapper">
-                    <img src="img/romulo.png" alt="Romulo Monteiro">
+                <div id="sobre-photo-slot">
+                    <img src="img/romulo.png" alt="" class="slot-img" aria-hidden="true">
                 </div>
             </div>
             <div class="col-12 col-md-7" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
@@ -529,6 +540,73 @@
             });
         });
     });
+
+    /* Foto flutuante */
+    (function () {
+        if (!window.matchMedia('(hover: hover)').matches) return;
+
+        const wrap       = document.getElementById('floating-photo-wrap');
+        const homeImg    = document.querySelector('#home-photo-slot .slot-img');
+        const sobreImg   = document.querySelector('#sobre-photo-slot .slot-img');
+        const sobreEl    = document.getElementById('sobre');
+        const orbDots    = [...document.querySelectorAll('.orb-dot')];
+        const orbAngles  = [0, (2 * Math.PI) / 3, (4 * Math.PI) / 3];
+        const orbSpeeds  = [0.55, 0.38, 0.72];
+        let prevTs = 0;
+
+        function lerp(a, b, t) { return a + (b - a) * t; }
+        function ease(t) { return t < 0.5 ? 2*t*t : 1 - Math.pow(-2*t+2, 2)/2; }
+
+        function loop(ts) {
+            const dt = Math.min((ts - prevTs) / 1000, 0.1);
+            prevTs = ts;
+
+            const sobreRect = sobreEl.getBoundingClientRect();
+            const wh = window.innerHeight;
+
+            if (sobreRect.bottom < -80) {
+                wrap.style.opacity = '0';
+                requestAnimationFrame(loop);
+                return;
+            }
+            wrap.style.opacity = '1';
+
+            const hr = homeImg.getBoundingClientRect();
+            const sr = sobreImg.getBoundingClientRect();
+
+            let progress = (wh - sobreRect.top) / (wh * 0.65);
+            progress = Math.max(0, Math.min(1, progress));
+            const t = ease(progress);
+
+            const x = lerp(hr.left, sr.left, t);
+            const y = lerp(hr.top,  sr.top,  t);
+            const w = lerp(hr.width,  sr.width,  t);
+            const h = lerp(hr.height, sr.height, t);
+
+            wrap.style.left   = x + 'px';
+            wrap.style.top    = y + 'px';
+            wrap.style.width  = w + 'px';
+            wrap.style.height = h + 'px';
+
+            /* pausa float durante transição, mantém glow */
+            wrap.style.animationPlayState = (progress < 0.05 || progress > 0.95)
+                ? 'running, running'
+                : 'paused, running';
+
+            /* bolinhas orbitantes */
+            const cx = w / 2, cy = h / 2;
+            const rx = cx + 26, ry = cy + 26;
+            orbDots.forEach((dot, i) => {
+                orbAngles[i] += orbSpeeds[i] * dt * 2 * Math.PI;
+                dot.style.transform = `translate(${cx + rx * Math.cos(orbAngles[i]) - 5}px, ${cy + ry * Math.sin(orbAngles[i]) - 5}px)`;
+            });
+
+            requestAnimationFrame(loop);
+        }
+
+        /* aguarda AOS terminar (900 ms) antes de revelar */
+        setTimeout(() => { requestAnimationFrame(loop); }, 1000);
+    })();
 
     /* Partículas canvas */
     const canvas = document.getElementById('particles-canvas');
