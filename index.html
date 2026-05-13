@@ -4,133 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romulo | Portfolio</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS - Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-
-
 </head>
 <body>
 
+<!-- Fundo fixo + partículas -->
+<div id="bg-gradient"></div>
+<canvas id="particles-canvas"></canvas>
 
+<!-- Barra de progresso de scroll -->
+<div id="scroll-progress"></div>
 
+<!-- Cursor personalizado -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg glass-nav">
-<div class="container-fluid">
-
-<a class="navbar-brand text-white fw-bold fs-3" href="#">
-Portfo<span class="o">lio</span>
-</a>
-
-<button class="navbar-toggler text-white" data-bs-toggle="collapse" data-bs-target="#menu">
-☰
-</button>
-
-<div class="collapse navbar-collapse" id="menu">
-
-<ul class="navbar-nav mx-auto">
-<li class="nav-item"><a class="nav-link active-link" href="#">Início</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-</ul>
-
-<button class="btn btn-glass">
-Vamos conversar →
-</button>
-
-</div>
-</div>
-</nav>
-<!-- HOME -->
-    <section class="home">
-        <div class="home-content" data-aos="fade-right" data-aos-duration="900">
-            <h1>Olá, sou Romulo<span> Monteiro </span></h1>
-            <h2>Frontend Developer</h2>
-            <p>
-                Sou web developer em Portugal e ajudo empresas a criar sites modernos
-                e profissionais para fazer crescer o seu negócio online.
-            </p>
-
-            <div class="buttons">
-                <a href="#" class="btn-primary">Entrar em contacto</a>
-                <a href="#" class="btn-secondary">Ver projetos</a>
-            </div>
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold fs-3" href="#inicio">
+            Portfo<span class="o">lio</span>
+        </a>
+        <button class="navbar-toggler text-white" data-bs-toggle="collapse" data-bs-target="#menu">☰</button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active-link" href="#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contato</a></li>
+            </ul>
+            <button class="btn btn-glass" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+                Vamos conversar →
+            </button>
         </div>
-        <div class="img" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
-            <img src="img/romulo.png" alt="">
-        </div>
-    </section>
-
-<!-- Servicos -->
-<section class="services">
-
-    <h1 data-aos="fade-up">Serviço<span>s</span></h1>
-    <p data-aos="fade-up" data-aos-delay="100">Os nossos serviços à tua disponibilidade</p>
-    <section class="container">
-    <div class="row g-4">
-
-        <!--card 1-->
-        <div class="col-12 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-        <div class="card liquid-card border-0">
-            <img src="https://img.freepik.com/vetores-gratis/banner-de-desenvolvimento-de-sites_33099-1687.jpg?semt=ais_hybrid&w=740&q=80"
-                class="card-img-top"
-                alt="Imagem">
-            <div class="card-body">
-                <h5 class="card-title text-white">Criação de Sites profissionais </h5>
-                <p class="card-text text-white-50">
-                Criação de sites profissionais, modernos e responsivos, desenvolvidos para destacar a sua marca, atrair clientes e gerar resultados online.
-                </p>
-                <a href="#" class="btn liquid-btn">
-                Ver Mais →
-                </a>
-            </div>
-        </div>
-        </div>
-
-        <!--card 2-->
-        <div class="col-12 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-        <div class="card liquid-card border-0">
-            <img src="https://www.citeforma.pt/media/k2/items/cache/a54c05e75d2ed6c2222655765fd5a865_L.jpg"
-                class="card-img-top"
-                alt="Imagem">
-            <div class="card-body">
-                <h5 class="card-title text-white">Produção de Conteudo Visual</h5>
-                <p class="card-text text-white-50">
-                Produção de conteúdo visual criativo e profissional para fortalecer a sua marca, captar atenção e transmitir a sua mensagem com impacto nas redes sociais e no digital.
-                </p>
-                <a href="#" class="btn liquid-btn">
-                Ver Mais →
-                </a>
-            </div>
-        </div>
-        </div>
-
-        <!--card 3-->
-        <div class="col-12 col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="card liquid-card border-0">
-            <img src="https://www.mazag.com.br/wp-content/uploads/2020/04/criacao-de-conteudo-visual.jpeg"
-                class="card-img-top"
-                alt="Imagem">
-            <div class="card-body">
-                <h5 class="card-title text-white">Markting Digital & Branding</h5>
-                <p class="card-text text-white-50">
-               Marketing digital e branding estratégico para aumentar a visibilidade da sua marca, atrair clientes e construir uma presença forte e memorável no mercado.
-                </p>
-                <a href="#" class="btn liquid-btn">
-                Ver Mais →
-                </a>
-            </div>
-        </div>
-        </div>
-
     </div>
-    </section>
+</nav>
+
+<!-- HOME -->
+<section class="home" id="inicio">
+    <div class="home-content" data-aos="fade-right" data-aos-duration="900">
+        <h1>Olá, sou Romulo<span> Monteiro</span></h1>
+        <h2 id="typed-text"></h2>
+        <p>
+            Sou web developer em Portugal e ajudo empresas a criar sites modernos
+            e profissionais para fazer crescer o seu negócio online.
+        </p>
+        <div class="buttons">
+            <a href="#contacto" class="btn-primary">Entrar em contacto</a>
+            <a href="#portfolio" class="btn-secondary">Ver projetos</a>
+        </div>
+    </div>
+    <div class="img" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <img src="img/romulo.png" alt="Romulo Monteiro">
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-12 col-md-5 text-center" data-aos="fade-right" data-aos-duration="900">
+                <div class="sobre-img-wrapper">
+                    <img src="img/romulo.png" alt="Romulo Monteiro">
+                </div>
+            </div>
+            <div class="col-12 col-md-7" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                <div class="glass-card">
+                    <h1>Sobre <span>mim</span></h1>
+                    <h3>Frontend Developer & Designer</h3>
+                    <p>
+                        Sou Romulo Monteiro, web developer baseado em Portugal com foco em criar experiências digitais modernas e impactantes. Apaixonado por design e tecnologia, combino estética com funcionalidade para entregar projectos que fazem a diferença.
+                    </p>
+                    <div class="sobre-info">
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Portugal</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Freelancer &amp; Open to Work</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Desenvolvimento Web</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>romulomonteiro7737@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="buttons mt-4">
+                        <a href="#" class="btn-primary" download>
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                        <a href="#contacto" class="btn-secondary">Contactar →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTADORES -->
+<section class="counters">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="0">
+                <div class="counter-card glass-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h2 class="counter" data-target="50">0</h2>
+                    <p>Projectos</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="counter-card glass-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h2 class="counter" data-target="3">0</h2>
+                    <p>Anos de Experiência</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="counter-card glass-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h2 class="counter" data-target="30">0</h2>
+                    <p>Clientes Satisfeitos</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="counter-card glass-card">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h2 class="counter" data-target="15">0</h2>
+                    <p>Tecnologias</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="services" id="servicos">
+    <h1 data-aos="fade-up">Os meus <span>Serviços</span></h1>
+    <p data-aos="fade-up" data-aos-delay="100">O que posso fazer por ti</p>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="card liquid-card border-0">
+                    <img src="https://img.freepik.com/vetores-gratis/banner-de-desenvolvimento-de-sites_33099-1687.jpg?semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Criação de Sites">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Criação de Sites Profissionais</h5>
+                        <p class="card-text text-white-50">
+                            Criação de sites profissionais, modernos e responsivos, desenvolvidos para destacar a sua marca, atrair clientes e gerar resultados online.
+                        </p>
+                        <a href="#contacto" class="btn liquid-btn">Ver Mais →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="card liquid-card border-0">
+                    <img src="https://www.citeforma.pt/media/k2/items/cache/a54c05e75d2ed6c2222655765fd5a865_L.jpg" class="card-img-top" alt="Conteúdo Visual">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Produção de Conteúdo Visual</h5>
+                        <p class="card-text text-white-50">
+                            Produção de conteúdo visual criativo e profissional para fortalecer a sua marca, captar atenção e transmitir a sua mensagem com impacto nas redes sociais e no digital.
+                        </p>
+                        <a href="#contacto" class="btn liquid-btn">Ver Mais →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card liquid-card border-0">
+                    <img src="https://www.mazag.com.br/wp-content/uploads/2020/04/criacao-de-conteudo-visual.jpeg" class="card-img-top" alt="Marketing Digital">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Marketing Digital &amp; Branding</h5>
+                        <p class="card-text text-white-50">
+                            Marketing digital e branding estratégico para aumentar a visibilidade da sua marca, atrair clientes e construir uma presença forte e memorável no mercado.
+                        </p>
+                        <a href="#contacto" class="btn liquid-btn">Ver Mais →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- SKILLS -->
@@ -139,138 +197,143 @@ Vamos conversar →
     <p data-aos="fade-up" data-aos-delay="100">Tecnologias que domino no desenvolvimento web</p>
     <div class="container">
         <div class="row g-4">
-
-            <!-- Frontend -->
             <div class="col-12 col-md-6" data-aos="fade-right" data-aos-duration="800">
                 <div class="skills-card">
-                    <h3><i class="fa-solid fa-display"></i> Frontend</h3>
-
+                    <h3><i class="fa-brands fa-html5"></i> Frontend</h3>
                     <div class="skill-item">
-                        <div class="skill-info"><span>HTML &amp; CSS</span><span>95%</span></div>
-                    <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-html5"></i> HTML &amp; CSS</span><span>95%</span></div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-js"></i> JavaScript</span><span>80%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>Bootstrap / Tailwind</span><span>90%</span></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-bootstrap"></i> Bootstrap / Tailwind</span><span>90%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>React</span><span>70%</span></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-react"></i> React</span><span>70%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>Figma / UI Design</span><span>75%</span></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-figma"></i> Figma / UI Design</span><span>75%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
                     </div>
                 </div>
             </div>
-
-            <!-- Backend -->
             <div class="col-12 col-md-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
                 <div class="skills-card">
                     <h3><i class="fa-solid fa-server"></i> Backend</h3>
-
                     <div class="skill-item">
-                        <div class="skill-info"><span>Node.js</span><span>72%</span></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-node-js"></i> Node.js</span><span>72%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>Python</span><span>65%</span></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-python"></i> Python</span><span>65%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>PHP / Laravel</span><span>60%</span></div>
+                        <div class="skill-info"><span><i class="fa-brands fa-php"></i> PHP / Laravel</span><span>60%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>MySQL / PostgreSQL</span><span>75%</span></div>
+                        <div class="skill-info"><span><i class="fa-solid fa-database"></i> MySQL / PostgreSQL</span><span>75%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-info"><span>REST APIs</span><span>80%</span></div>
+                        <div class="skill-info"><span><i class="fa-solid fa-plug"></i> REST APIs</span><span>80%</span></div>
                         <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-
-<!--Portfolio-->
-
-<section class="portfolio">
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
     <h1 data-aos="fade-up">Portfolio</h1>
-    <p data-aos="fade-up" data-aos-delay="100">Alguns dos projetos que desenvolvi</p>
-    <div class="container">
-        <div class="row g-4">
+    <p data-aos="fade-up" data-aos-delay="100">Alguns dos projectos que desenvolvi</p>
 
-            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
+    <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="150">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="sites">Sites</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+    </div>
+
+    <div class="container">
+        <div class="row g-4" id="portfolio-grid">
+
+            <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="sites" data-aos="zoom-in" data-aos-delay="0">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" class="card-img-top" alt="Website Restaurante">
                     <div class="card-body">
+                        <span class="portfolio-tag">Site</span>
                         <h5 class="card-title">Website para Restaurante</h5>
-                        <p class="card-text">Criação de site moderno com menu digital, reservas online e integração com redes sociais.</p>
-                        <a href="https://romulomonteio.github.io/restaurante/" class="btn btn-primary" target="_blank">Ver Projeto →</a>
+                        <p class="card-text">Site moderno com menu digital, reservas online e integração com redes sociais.</p>
+                        <a href="https://romulomonteio.github.io/restaurante/" class="btn btn-primary" target="_blank">Ver Projecto →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="ecommerce" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" class="card-img-top" alt="Loja Online Moda">
                     <div class="card-body">
+                        <span class="portfolio-tag">E-commerce</span>
                         <h5 class="card-title">Loja Online de Moda</h5>
                         <p class="card-text">E-commerce profissional com catálogo de produtos, pagamentos seguros e gestão de encomendas.</p>
-                        <a href="#" class="btn btn-primary">Ver Projeto →</a>
+                        <a href="#" class="btn btn-primary">Ver Projecto →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="sites" data-aos="zoom-in" data-aos-delay="200">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" class="card-img-top" alt="Landing Page Empresarial">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" class="card-img-top" alt="Landing Page">
                     <div class="card-body">
+                        <span class="portfolio-tag">Site</span>
                         <h5 class="card-title">Landing Page Empresarial</h5>
                         <p class="card-text">Página estratégica para captar clientes, apresentar serviços e aumentar conversões.</p>
-                        <a href="#" class="btn btn-primary">Ver Projeto →</a>
+                        <a href="#" class="btn btn-primary">Ver Projecto →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
+            <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="branding" data-aos="zoom-in" data-aos-delay="0">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600" class="card-img-top" alt="Branding Empresa">
                     <div class="card-body">
+                        <span class="portfolio-tag">Branding</span>
                         <h5 class="card-title">Branding para Empresa</h5>
-                        <p class="card-text">Desenvolvimento de identidade visual moderna com logotipo, cores e posicionamento digital.</p>
-                        <a href="#" class="btn btn-primary">Ver Projeto →</a>
+                        <p class="card-text">Identidade visual moderna com logotipo, paleta de cores e posicionamento digital.</p>
+                        <a href="#" class="btn btn-primary">Ver Projecto →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="branding" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600" class="card-img-top" alt="Redes Sociais">
                     <div class="card-body">
+                        <span class="portfolio-tag">Branding</span>
                         <h5 class="card-title">Gestão de Redes Sociais</h5>
-                        <p class="card-text">Criação de conteúdos visuais e estratégia digital para aumentar alcance e engagement.</p>
-                        <a href="#" class="btn btn-primary">Ver Projeto →</a>
+                        <p class="card-text">Conteúdos visuais e estratégia digital para aumentar alcance e engagement.</p>
+                        <a href="#" class="btn btn-primary">Ver Projecto →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-12 col-md-6 col-lg-4 portfolio-item" data-category="sites" data-aos="zoom-in" data-aos-delay="200">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" class="card-img-top" alt="Website Advogado">
                     <div class="card-body">
+                        <span class="portfolio-tag">Site</span>
                         <h5 class="card-title">Website para Advogado</h5>
                         <p class="card-text">Site profissional e elegante para fortalecer autoridade e captar novos clientes.</p>
-                        <a href="#" class="btn btn-primary">Ver Projeto →</a>
+                        <a href="#" class="btn btn-primary">Ver Projecto →</a>
                     </div>
                 </div>
             </div>
@@ -279,25 +342,241 @@ Vamos conversar →
     </div>
 </section>
 
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+    <div class="container">
+        <h1 data-aos="fade-up">Entre em <span>Contacto</span></h1>
+        <p class="contacto-sub" data-aos="fade-up" data-aos-delay="100">Tens um projecto em mente? Vamos conversar!</p>
 
-</body>
+        <div class="row g-5 justify-content-center">
+
+            <div class="col-12 col-md-5" data-aos="fade-right" data-aos-duration="800">
+                <div class="glass-card contact-info">
+                    <h3>Fala comigo</h3>
+                    <p class="text-white-50 mb-4">Estou disponível para projectos freelance, parcerias e oportunidades de trabalho.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>romulomonteiro7737@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <strong>Localização</strong>
+                            <p>Portugal</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <strong>Disponibilidade</strong>
+                            <p>Freelance &amp; Projectos</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-7" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+                <form class="glass-card contact-form">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <input type="text" class="glass-input" placeholder="O teu nome" required>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="email" class="glass-input" placeholder="O teu email" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="glass-input" placeholder="Assunto">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="glass-input" rows="5" placeholder="A tua mensagem..." required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn liquid-btn w-100">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 Romulo Monteiro · Feito com <span style="color:#38bdf8">♥</span> em Portugal</p>
+</footer>
+
+<!-- Botão voltar ao topo -->
+<button id="back-to-top" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
+    /* AOS */
     AOS.init({ duration: 750, once: true, offset: 80 });
 
-    /* Animar barras de skills quando entram no ecrã */
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-                    bar.style.width = bar.dataset.width + '%';
-                });
-                observer.unobserve(entry.target);
+    /* Typed.js */
+    new Typed('#typed-text', {
+        strings: ['Frontend Developer', 'UI Designer', 'Web Creator', 'Freelancer'],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true
+    });
+
+    /* Smooth scroll */
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        });
+    });
+
+    /* Scroll progress bar */
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        progressBar.style.width = pct + '%';
+    });
+
+    /* Botão voltar ao topo */
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 400));
+    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* Cursor personalizado (apenas desktop) */
+    if (window.matchMedia('(hover: hover)').matches) {
+        const cursor = document.getElementById('cursor');
+        const cursorDot = document.getElementById('cursor-dot');
+        let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
+
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+        });
+
+        (function animateCursor() {
+            curX += (mouseX - curX) * 0.12;
+            curY += (mouseY - curY) * 0.12;
+            cursor.style.left = curX + 'px';
+            cursor.style.top = curY + 'px';
+            requestAnimationFrame(animateCursor);
+        })();
+
+        document.querySelectorAll('a, button, .filter-btn').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+        });
+    } else {
+        document.getElementById('cursor').style.display = 'none';
+        document.getElementById('cursor-dot').style.display = 'none';
+    }
+
+    /* Barras de skills */
+    const skillObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.querySelectorAll('.skill-fill').forEach(b => b.style.width = b.dataset.width + '%');
+                skillObs.unobserve(e.target);
             }
         });
     }, { threshold: 0.3 });
+    document.querySelectorAll('.skills-card').forEach(c => skillObs.observe(c));
 
-    document.querySelectorAll('.skills-card').forEach(card => observer.observe(card));
+    /* Contadores */
+    const counterObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            const target = +el.dataset.target;
+            let current = 0;
+            const step = target / (1800 / 16);
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = Math.floor(current) + '+';
+            }, 16);
+            counterObs.unobserve(el);
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
+
+    /* Filtros do portfolio */
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                const show = filter === 'all' || item.dataset.category === filter;
+                item.style.display = show ? '' : 'none';
+                if (show) item.style.animation = 'fadeInUp 0.4s ease forwards';
+            });
+        });
+    });
+
+    /* Partículas canvas */
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const particles = Array.from({ length: 55 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.8 + 0.4,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        alpha: Math.random() * 0.35 + 0.08
+    }));
+
+    (function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(56,189,248,${p.alpha})`;
+            ctx.fill();
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        });
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 110) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(56,189,248,${0.12 * (1 - dist / 110)})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(drawParticles);
+    })();
 </script>
 </html>
