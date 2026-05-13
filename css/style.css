@@ -679,4 +679,7 @@ nav span { color: #0ea5e9; text-decoration: underline; }
 
     #back-to-top { cursor: pointer; bottom: 20px; right: 20px; }
     .filter-btn { cursor: pointer; }
+    .sobre-img-wrapper{display: none;}
+    
 }
+
