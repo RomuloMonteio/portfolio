@@ -709,7 +709,7 @@
 
     /* EmailJS — formulário de contacto */
     (function () {
-        emailjs.init('SEU_PUBLIC_KEY');
+        emailjs.init('WWoG_GAKUk5NcXDmp');
 
         const form      = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
@@ -726,7 +726,7 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> A enviar...';
 
-            emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', form)
+            emailjs.sendForm('service_0zkv3e9', 'template_i3baxm8', form)
                 .then(() => {
                     showToast('✓ Mensagem enviada com sucesso!', 'success');
                     form.reset();
