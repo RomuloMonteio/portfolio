@@ -688,6 +688,154 @@ nav span { color: #0ea5e9; text-decoration: underline; }
     box-shadow: 0 0 25px rgba(56,189,248,0.45);
 }
 
+/* COMO TRABALHO */
+.como-trabalho {
+    padding: 80px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.como-trabalho::before {
+    content: "";
+    position: absolute;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: #8b5cf6;
+    filter: blur(100px);
+    opacity: 0.08;
+    bottom: -60px; left: -60px;
+    pointer-events: none;
+}
+
+.como-trabalho h1 { text-align: center; font-size: 48px; font-weight: 700; margin-bottom: 10px; }
+.como-trabalho h1 span { color: #38bdf8; }
+.como-trabalho > p { text-align: center; color: rgba(255,255,255,.65); font-size: 18px; margin-bottom: 70px; }
+
+.processo-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+}
+
+.processo-timeline::before {
+    content: '';
+    position: absolute;
+    top: 34px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6, #38bdf8);
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(56,189,248,0.35);
+}
+
+.processo-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 28px;
+    box-shadow: 0 0 0 5px rgba(59,130,246,0.15), 0 0 25px rgba(139,92,246,0.45);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.processo-step:hover .step-number {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 5px rgba(59,130,246,0.3), 0 0 35px rgba(139,92,246,0.65);
+}
+
+.step-card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 28px 22px;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,.2), inset 0 1px 1px rgba(255,255,255,.1);
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,.3), 0 0 20px rgba(56,189,248,.15);
+    border-color: rgba(56,189,248,0.3);
+}
+
+.step-icon {
+    font-size: 30px;
+    color: #38bdf8;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.step-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* TOAST DO FORMULÁRIO */
+.form-toast {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    padding: 16px 24px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    pointer-events: none;
+    max-width: 300px;
+}
+
+.form-toast.show { opacity: 1; transform: translateY(0); }
+
+.form-toast.success {
+    background: rgba(16,185,129,0.15);
+    border: 1px solid rgba(16,185,129,0.4);
+    color: #6ee7b7;
+    box-shadow: 0 0 20px rgba(16,185,129,0.2);
+}
+
+.form-toast.error {
+    background: rgba(239,68,68,0.15);
+    border: 1px solid rgba(239,68,68,0.4);
+    color: #fca5a5;
+    box-shadow: 0 0 20px rgba(239,68,68,0.2);
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
     body { cursor: auto; }
@@ -725,6 +873,14 @@ nav span { color: #0ea5e9; text-decoration: underline; }
     .sobre .glass-card { padding: 24px 20px; }
 
     .skills h1, .portfolio h1, .contacto h1, .services h1 { font-size: 34px; }
+
+    .como-trabalho h1 { font-size: 34px; }
+    .como-trabalho > p { margin-bottom: 40px; }
+    .processo-timeline { grid-template-columns: 1fr 1fr; }
+    .processo-timeline::before { display: none; }
+    .step-number { width: 56px; height: 56px; font-size: 18px; margin-bottom: 20px; }
+    .step-card { padding: 20px 14px; }
+    .step-card h3 { font-size: 15px; }
     .skills-card { padding: 24px 20px; }
 
     .counter-card h2 { font-size: 36px; }
